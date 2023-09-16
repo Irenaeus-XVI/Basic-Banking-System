@@ -21,7 +21,7 @@ export default function NavBar() {
                                 <Link class="nav-link" to="customers">Customers</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Transaction history</a>
+                                <Link class="nav-link" to="transaction">Transaction history</Link>
                             </li>
 
                         </ul>

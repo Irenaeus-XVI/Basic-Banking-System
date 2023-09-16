@@ -52,6 +52,16 @@ export default function Customers() {
   };
 
 
+  const transferHistory = async (receiver, balance) => {
+    const response = await axios.post('http://localhost:4000/transfers', {
+      sender: "650623aa275623807468b915",
+      receiver: receiver,
+      balance: balance
+    });
+
+  }
+
+
   return (
     <>
       <div>
@@ -121,6 +131,7 @@ export default function Customers() {
                 data-bs-dismiss="modal" // Close the modal when clicked
                 onClick={() => {
                   sendMoney(selectedCustomerId, balanceToSend);
+                  transferHistory(selectedCustomerId, balanceToSend)
                 }}
               >
                 Save changes
